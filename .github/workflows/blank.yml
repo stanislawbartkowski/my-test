@@ -21,7 +21,8 @@ jobs:
           echo $PWD
           ls $HOME
     - name: ls
-      run: ls -ltrh
+      run: | 
+        ls -ltrhR
     - name: branchname
       run: echo ${{ github.ref_name }}
     - name: merge if main
