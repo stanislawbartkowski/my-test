@@ -14,7 +14,11 @@ jobs:
       with:
         fetch-depth: 0
     - name: Home
-      run: echo $HOME
+      run: |
+          echo $HOME
+          cd
+          echo $PWD
+          ls $HOME
     - name: ls
       run: ls -ltrh
     - name: branchname
