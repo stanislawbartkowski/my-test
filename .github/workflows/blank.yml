@@ -22,7 +22,7 @@ jobs:
       run: echo "Main branch - do not merge"
     - name: merge if not main
       if: github.ref_name != 'main'
-      run: git fetch --all; get merge  origin/main -m "test/merge"
+      run: git fetch --all; git merge  origin/main -m "test/merge"
     - name: ls again
       run: ls -ltrh
       
