@@ -1,0 +1,21 @@
+name: Test clone
+
+on:
+  workflow_dispatch: 
+  
+jobs:
+
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+      with:
+        fetch-depth: 0
+        path: 'PerseusRestService'
+        ref: ''
+    - name: ls
+      run: ls -ltrh
+    - name: branchname
+      run: echo ${{ github.ref_name }}
